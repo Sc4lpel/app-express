@@ -1,0 +1,19 @@
+<h1>Todolist</h1>
+
+<ul>
+    <% 
+        todolist.forEach(function(todo, index){
+        %>
+        <li><a href="todo/supprimer/<%= index %>">X</a>&nbsp;<%= todo %></li>
+        <%
+        });
+    %>
+</ul>
+
+<form action="/todo/ajouter" method="post">
+        <p>
+            <label for="newtoto">que dois-faire ?</label>
+            <input type="text" name="newtoto" autofocus/>
+            <input type="submit" />
+        </p>
+</form>

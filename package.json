@@ -1,0 +1,22 @@
+{
+  "name": "first-app",
+  "version": "0.0.0",
+  "description": "\"first app avec express\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sc4lpel/app-express.git"
+  },
+  "author": "4l Sc4p",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sc4lpel/app-express/issues"
+  },
+  "homepage": "https://github.com/Sc4lpel/app-express#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

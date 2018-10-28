@@ -17,5 +17,14 @@ app.get('/etage/:etagenum/chambre', function(req, res) {
     res.send('Vous êtes dans la chambre à l\'étage n°' +  req.params.etagenum);
 });
 
+app.get('/compteur/:nombre', function(req, res){
+    var noms = ['Emilie', 'Daniella', 'Mamoud', 'un autre crevard'];
+    res.render('compteur.ejs', {compteur:req.params.nombre, noms: noms});
+})
+
+app.get('/middlewares', function(req, res){
+    res.render('middlewares.ejs');
+});
+
 
 app.listen(8080);

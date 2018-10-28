@@ -1,0 +1,30 @@
+<h1>Middlewares</h1>
+<dl>
+    <dt>compression</dt>
+    <dd>permet la compression gzip de la page pour un envoi plus rapide au navigateur</dd>
+    <dt>cookie-parser</dt>
+    <dd>permet de manipuler les cookies</dd>
+    <dt>cookie-session</dt>
+    <dd>permet de gérer des informations de session (durant la visite d'un visiteur)</dd>
+    <dt>serve-favicon</dt>
+    <dd>permet de renvoyer la favicon du site</dd>
+    <dt>csrf </dt>
+    <dd>fournit une protection contre les failles CSRF</dd>
+</dl>
+
+<p>
+    Tous ces middlewares offrent vraiment des micro-fonctionnalités. Il y en a des tous petits comme "serve-favicon" par exemple.
+</p>
+<p>
+    Ces middlewares sont interconnectés et peuvent communiquer entre eux. Express ne fait qu'ajouter les routes et les vues par-dessus l'ensemble.
+</p>
+<p>
+    Tous ces middlewares communiquent entre eux en se renvoyant jusqu'à 4 paramètres :
+</p>
+
+<ul>
+    <li>err : les erreurs</li>
+    <li>req : la requête du visiteur</li>
+    <li>res : la réponse à renvoyer (la page HTML et les informations d'en-tête)</li>
+    <li>next : un callback vers la prochaine fonction à appeler</li>
+</ul>

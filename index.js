@@ -17,28 +17,8 @@ app.use(function(req, res, next){
 });
 
 
-app.get('/', function(req, res){
-    res.render('home.ejs', {todoList: todoList});
-});
 
-app.get('/sous-sol', function(req, res){
-    res.setHeader('Content-Type', 'text/plain');
-    res.send('vous êtes dans ma cave à vin !!');
-});
 
-app.get('/etage/:etagenum/chambre', function(req, res) {
-    res.setHeader('Content-Type', 'text/plain');
-    res.send('Vous êtes dans la chambre à l\'étage n°' +  req.params.etagenum);
-});
-
-app.get('/compteur/:nombre', function(req, res){
-    var noms = ['Emilie', 'Daniella', 'Mamoud', 'un autre crevard'];
-    res.render('compteur.ejs', {compteur:req.params.nombre, noms: noms});
-})
-
-app.get('/middlewares', function(req, res){
-    res.render('middlewares.ejs');
-});
 
 
 
@@ -52,7 +32,7 @@ app.post('/todo/ajouter/', urlencodedParser, function(req, res, next) {
     if(req.body.newtoto != ''){
         var tache = req.body.newtoto;
         req.session.todolist.push(tache);
-        console.log("\"" + tache + "\" a été ajouté");
+        console.log("\"" + tache + "\"a été ajouté");
     }
     next();
 });
@@ -69,6 +49,7 @@ app.get('/todo/supprimer/:id', function(req, res) {
 app.use(function(req, res, next){
     res.redirect('/todo');
 })
+
 
 // ...
 
